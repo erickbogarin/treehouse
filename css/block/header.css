@@ -1,0 +1,67 @@
+.header {
+	padding-top: 8px;
+	padding-bottom: 8px;
+	height: 100%;
+
+	text-transform: uppercase;
+}
+
+.header-title {
+	color: rgb(85, 85, 85);
+	font-size: 1.2em;
+	
+	display: inline;
+	vertical-align: middle;
+}
+
+.header-logo {
+	display: inline-block;
+	vertical-align: middle;
+	width: 28px;
+	height: 28px;
+	text-indent: -9999px;
+	overflow: hidden;
+	border-radius: 50%;
+
+	background-color: rgb(124, 197, 118);
+	background-image: url(/img/block/header/leaf.png);
+	background-position: center;
+	background-repeat: no-repeat;
+}
+
+.header-menu {
+	float: right;	
+}
+
+@media (max-width: 768px) {
+	.header-menu {
+		position: fixed;
+		z-index: 1;
+		top: 0;
+		left: -90%;
+	}
+}
+
+@media (min-width: 768px) {
+	.header {
+		padding-top: 25px;
+		padding-bottom: 25px;		
+	}
+	.header-menu-item {
+		display: inline-block;
+		padding: 0 .5em;
+		vertical-align: sub;
+		text-transform: uppercase;
+		color: rgb(119, 119, 119);
+	}
+}
+
+@media (min-width: 992px) {
+	.header {
+		padding-top: 50px;
+		padding-bottom: 50px;		
+	}
+	.header-menu-item {
+		padding: 0 1em;
+	}
+}

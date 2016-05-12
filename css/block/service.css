@@ -1,0 +1,10 @@
+.service {
+	padding: 5em;
+	text-align: center;
+}
+
+.service-title {
+	font-size: 2em;
+	font-weight: bold;
+	text-transform: uppercase;
+}
