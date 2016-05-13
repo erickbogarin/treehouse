@@ -6,27 +6,23 @@
 	text-transform: uppercase;
 }
 
-.header-title {
-	color: rgb(85, 85, 85);
-	font-size: 1.2em;
-	
-	display: inline;
+.header-logo {
+	text-indent: -9999px;
+	width: 29px;
+	height: 29px;
+	background: url("/img/block/header/leaf.svg") no-repeat;
+	background-size: contain;
+
+	display: inline-block;
 	vertical-align: middle;
 }
 
-.header-logo {
-	display: inline-block;
+.header-title {
+	color: rgb(85, 85, 85);
+	font-size: 1.2em;
+	font-weight: bold;
+	display: inline;
 	vertical-align: middle;
-	width: 28px;
-	height: 28px;
-	text-indent: -9999px;
-	overflow: hidden;
-	border-radius: 50%;
-
-	background-color: rgb(124, 197, 118);
-	background-image: url(/img/block/header/leaf.png);
-	background-position: center;
-	background-repeat: no-repeat;
 }
 
 .header-menu {
