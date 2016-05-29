@@ -1,11 +1,11 @@
-.introdution {	
+.introdution {
 	background:   linear-gradient(
 		rgba(0, 0, 0, 0.6),
 		rgba(0, 0, 0, 0.6)
 	),url("/img/block/title/background.png") no-repeat;
 	max-width: 100%;
 	background-size: cover;
-	
+
 	text-align: center;
 	color: white;
 	font-family: 'Montserrat', sans-serif;
@@ -17,14 +17,12 @@
 	padding-top: 2em;
 	white-space: pre-line;
 }
-
 .introdution-subtitle {
 	font-size: .7em;
 	margin-top: 2.5em;
 	color: rgb(204, 204, 204);
 	font-family: 'Roboto Slab', serif;
 }
-
 
 .introdution-button {
 	padding-top: 4em;

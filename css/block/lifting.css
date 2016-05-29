@@ -1,0 +1,118 @@
+.lifting {
+  color: white;
+}
+.lifting-left-bar {
+  position:relative;
+  background-color: rgb(233, 233, 233);
+  display: none;
+  padding: 10% 0;
+}
+
+.lifting-description {
+  position:relative;
+
+  background:   linear-gradient(
+    rgba(0, 0, 0, 0.6),
+    rgba(0, 0, 0, 0.6)
+    ),url("/img/block/lifting/backgroud.png") no-repeat;
+    width: 100%;
+    height: auto;
+  }
+
+  .lifting-description-text-area {
+    padding: 10%;
+  }
+
+  .lifting-description-title {
+    font-weight: bold;
+    text-transform: uppercase;
+    line-height: 1.4;
+    white-space: pre-line;
+  }
+
+  .lifting-description-title span{
+    font-size: 0.9em;
+  }
+
+  .lifting-description-subtitle {
+    font-size: .7em;
+    padding-top: .5em;
+    color: rgb(204, 204, 204);
+    text-align: justify;
+    font-family: 'Roboto Slab', serif;
+  }
+
+  .lifting-description-features {
+    padding: 1em 0;
+  }
+
+  .lifting-feature-item {
+    color: rgb(204, 204, 204);
+    font-size: .7em;
+    font-family: 'Roboto Slab', serif;
+    padding-bottom: 1.4em;
+  }
+
+  .lifiting-checkmark {
+    background: url("/img/block/lifting/icon-checkmark.svg") no-repeat;
+    height: 32px;
+    width: 32px;
+    display: inline-block;
+    vertical-align: middle;
+    text-indent: -9999px;
+    padding-right: .75em;
+  }
+
+  @media (max-width: 768px) {
+  }
+
+  @media (min-width: 768px) {
+    .lifting-description {
+    }
+    .lifting-description-title {
+      font-size: 1.8em;
+    }
+    .lifting-feature-item {
+      padding-bottom: .8em;
+    }
+  }
+
+  @media (min-width: 992px) {
+    .lifting {
+      float:left;
+      width:100%;
+      background:yellow;
+      position:relative;
+
+    }
+    .lifting-container {
+      float:left;
+      width:100%;
+      background:rgb(233, 233, 233);
+      position:relative;
+    }
+
+    .lifting-left-bar {
+      float:left;
+      position:relative;
+      display: block;
+      width: 30%;
+    }
+    .lifting-left-bar img {
+      position: absolute;
+      right: 0;
+      top: 0;
+      margin-top: 40px;
+    }
+    .lifting-description {
+      float:left;
+      position:relative;
+      width: 70%;
+    }
+    .lifting-description-title {
+      font-size: 2em;
+    }
+    .lifting-description-subtitle {
+      font-size: 1em;
+    }
+  }
