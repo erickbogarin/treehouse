@@ -1,3 +1,6 @@
+/*******************************
+            Header
+*******************************/
 .header {
 	padding-top: 8px;
 	padding-bottom: 8px;
@@ -6,6 +9,7 @@
 	text-transform: uppercase;
 }
 
+/* Logo */
 .header-logo {
 	text-indent: -9999px;
 	width: 29px;
@@ -13,14 +17,17 @@
 	background: url("/img/block/header/leaf.svg") no-repeat;
 	background-size: contain;
 
-	display: inline-block;
+	@extend %inline-block;
 	vertical-align: middle;
 }
 
+
+/* Title */
 .header-title {
 	color: rgb(85, 85, 85);
 	font-size: 1.2em;
 	font-weight: bold;
+
 	display: inline;
 	vertical-align: middle;
 }
@@ -29,6 +36,9 @@
 	float: right;
 }
 
+/*******************************
+        Media-Queries
+*******************************/
 @media (max-width: 768px) {
 	.header-menu {
 		position: fixed;
@@ -45,10 +55,11 @@
 	}
 	.header-menu-item {
 		display: inline-block;
-		padding: 0 .5em;
 		vertical-align: sub;
+		padding: 0 .5em;
+
 		text-transform: uppercase;
-		color: rgb(119, 119, 119);
+		color: $color-silver;
 	}
 }
 

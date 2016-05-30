@@ -1,3 +1,21 @@
+/*!
+ * # Treehouse
+ * http://github.com/semantic-org/semantic-ui/
+ *
+ *
+ * Copyright 2016 Erick Bogarin
+ *
+ */
+.introdution-title, .service-title, .service-item-title, .lifting-description-title {
+  text-transform: uppercase;
+  font-weight: bold; }
+
+.header-logo {
+  display: inline-block; }
+
+.introdution, .service {
+  text-align: center; }
+
 /*! normalize.css v4.1.1 | MIT License | github.com/necolas/normalize.css */
 /**
  * 1. Change the default font family in all browsers (opinionated).
@@ -644,5 +662,272 @@ textarea {
   h2,
   h3 {
     page-break-after: avoid; } }
+/*******************************
+            Header
+*******************************/
+.header {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  height: 100%;
+  text-transform: uppercase; }
+
+/* Logo */
+.header-logo {
+  text-indent: -9999px;
+  width: 29px;
+  height: 29px;
+  background: url("/img/block/header/leaf.svg") no-repeat;
+  background-size: contain;
+  vertical-align: middle; }
+
+/* Title */
+.header-title {
+  color: #555555;
+  font-size: 1.2em;
+  font-weight: bold;
+  display: inline;
+  vertical-align: middle; }
+
+.header-menu {
+  float: right; }
+
+/*******************************
+        Media-Queries
+*******************************/
+@media (max-width: 768px) {
+  .header-menu {
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: -90%; } }
+@media (min-width: 768px) {
+  .header {
+    padding-top: 25px;
+    padding-bottom: 25px; }
+
+  .header-menu-item {
+    display: inline-block;
+    vertical-align: sub;
+    padding: 0 .5em;
+    text-transform: uppercase;
+    color: #777777; } }
+@media (min-width: 992px) {
+  .header {
+    padding-top: 50px;
+    padding-bottom: 50px; }
+
+  .header-menu-item {
+    padding: 0 1em; } }
+.btn {
+  font-size: .75em;
+  padding: 1.6em 2.9em;
+  border: 0;
+  text-shadow: 0px 1px 1px rgba(0, 0, 0, 0.7);
+  text-transform: uppercase;
+  cursor: pointer;
+  border-radius: 50px; }
+
+.btn-success {
+  color: white;
+  background-color: #7cc576; }
+
+.btn-success:hover {
+  background-color: #83d47c; }
+
+/*******************************
+           Introdution
+*******************************/
+/* Content */
+.introdution {
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("/img/block/title/background.png") no-repeat;
+  max-width: 100%;
+  background-size: cover;
+  color: white;
+  padding: 5% 0 10% 0; }
+
+/* Title */
+.introdution-title {
+  white-space: pre-line; }
+
+/* Subtitle */
+.introdution-subtitle {
+  color: #cccccc;
+  font-family: 'Roboto Slab', serif;
+  font-size: .7em;
+  margin-top: 2.5em; }
+
+/* Button */
+.introdution-button {
+  padding-top: 4em; }
+
+/*******************************
+        Media-Queries
+*******************************/
+@media (min-width: 768px) {
+  .introdution-title {
+    font-size: 2em; }
+
+  .introdution-subtitle {
+    font-size: 1em; } }
+@media (min-width: 992px) {
+  .introdution-title {
+    font-size: 3.2em;
+    line-height: 1.2em; } }
+/*******************************
+            Service
+*******************************/
+/* Content */
+.service {
+  padding-top: 5%; }
+
+/* Title */
+.service-title {
+  font-size: 1.75em; }
+
+/* Subtitle */
+.service-subtitle {
+  color: #777777;
+  font-family: 'Roboto Slab', serif;
+  margin-top: 1em; }
+
+/*--------------
+     Items
+---------------*/
+.service-item {
+  padding: 5% 10%; }
+
+.service-item-title {
+  padding-top: 1.2em; }
+
+.service-item-description {
+  color: #777777;
+  font-family: 'Roboto Slab', serif;
+  font-size: 1em;
+  line-height: 2em;
+  text-align: center; }
+
+/*******************************
+        Media-Queries
+*******************************/
+@media (min-width: 768px) {
+  .service-title {
+    font-size: 2em; } }
+@media (min-width: 992px) {
+  .service-item {
+    width: 20%;
+    padding: 5% 5%;
+    display: inline-block;
+    vertical-align: middle; }
+
+  .service-item-description {
+    font-size: .7em; } }
+/*******************************
+            Lifting
+*******************************/
+/* Content */
+.lifting {
+  color: white; }
+
+/*--------------
+      Left-Column
+---------------*/
+.lifting-left-bar {
+  position: relative;
+  background-color: #e9e9e9;
+  display: none;
+  padding: 10% 0; }
+
+/*--------------
+      Right-Column
+---------------*/
+.lifting-description {
+  position: relative;
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("/img/block/lifting/backgroud.png") no-repeat;
+  width: 100%;
+  height: auto; }
+
+/* Text Area */
+.lifting-description-text-area {
+  padding: 10%; }
+
+/* Title */
+.lifting-description-title {
+  line-height: 1.4;
+  white-space: pre-line; }
+  .lifting-description-title span {
+    font-size: 0.9em; }
+
+/* Subtitle */
+.lifting-description-subtitle {
+  color: #cccccc;
+  font-family: 'Roboto Slab', serif;
+  font-size: .7em;
+  padding-top: .5em;
+  text-align: justify; }
+
+/* Features */
+.lifting-description-features {
+  padding: 1em 0; }
+
+.lifting-feature-item {
+  color: #cccccc;
+  font-family: 'Roboto Slab', serif;
+  font-size: .7em;
+  padding-bottom: 1.4em; }
+
+/* Left-Column Background */
+.lifiting-checkmark {
+  background: url("/img/block/lifting/icon-checkmark.svg") no-repeat;
+  height: 32px;
+  width: 32px;
+  display: inline-block;
+  vertical-align: middle;
+  text-indent: -9999px;
+  padding-right: .75em; }
+
+/*******************************
+        Media-Queries
+*******************************/
+@media (min-width: 768px) {
+  .lifting-description-title {
+    font-size: 1.8em; }
+
+  .lifting-feature-item {
+    padding-bottom: .8em; } }
+@media (min-width: 992px) {
+  .lifting {
+    float: left;
+    width: 100%;
+    background: yellow;
+    position: relative; }
+
+  .lifting-container {
+    float: left;
+    width: 100%;
+    background: #e9e9e9;
+    position: relative; }
+
+  .lifting-left-bar {
+    float: left;
+    position: relative;
+    display: block;
+    width: 30%; }
+
+  .lifting-left-bar img {
+    position: absolute;
+    right: 0;
+    top: 0;
+    margin-top: 40px; }
+
+  .lifting-description {
+    float: left;
+    position: relative;
+    width: 70%; }
+
+  .lifting-description-title {
+    font-size: 2em; }
+
+  .lifting-description-subtitle {
+    font-size: 1em; } }
 
 /*# sourceMappingURL=style.css.map */
