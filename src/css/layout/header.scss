@@ -1,0 +1,76 @@
+/*******************************
+						Header
+*******************************/
+.header {
+	height: 100%;
+	padding-top: 8px;
+	padding-bottom: 8px;
+	text-transform: uppercase;
+
+	@media #{$screen-sm-min} {
+		@include container(25px);
+	}
+	@media #{$screen-md-min} {
+		padding-top: 50px;
+		padding-bottom: 50px;
+	}
+}
+
+/*--------------
+ Title
+---------------*/
+.header-title {
+	color: rgb(85, 85, 85);
+	font-size: 1.2em;
+	font-weight: bold;
+
+	display: inline;
+	vertical-align: middle;
+
+	&::before {
+		content: '';
+		background: url("/dist/img/block/header/leaf.svg") no-repeat;
+		width: 29px;
+		height: 29px;
+
+		display:inline-block;
+		vertical-align: middle;
+	}
+}
+
+/*--------------
+ Menu
+---------------*/
+.header-menu {
+	float: right;
+
+	@media #{$screen-sm-max} {
+		left: -90%;
+		position: fixed;
+		top: 0;
+		z-index: 1;
+	}
+}
+
+/*--------------
+ Menu Items
+---------------*/
+.header-menu-item {
+	@media #{$screen-sm-min} {
+		color: $color-silver;
+		padding: 0 .5em;
+		text-transform: uppercase;
+
+		display: inline-block;
+		vertical-align: sub;
+
+		&:hover {
+			border-bottom: 5px solid black;
+			padding-bottom: 5px;
+			transition: all .15s ease-in-out;
+		}
+	}
+	@media #{$screen-md-min} {
+		padding: 0 1em;
+	}
+}

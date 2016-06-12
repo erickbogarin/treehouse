@@ -1,0 +1,89 @@
+/*******************************
+           Introdution
+*******************************/
+
+/* Content */
+.introdution {
+	@include image-background("/dist/img/block/title/background.png");
+	max-width: 100%;
+	background-size: cover;
+
+	@extend %text-center;
+	color: $color-white;
+
+	padding: 5% 0 10% 0;
+
+	animation: fade-in 0.7s ease-in;
+	-webkit-animation: fade-in 0.7s ease-in;
+}
+
+/* Title */
+.introdution-title {
+	@extend %title-style;
+	font-size: 1.75em;
+	white-space: pre-line;
+}
+
+@-webkit-keyframes fade-in {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1%;
+	}
+}
+
+
+@keyframes fade-in {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1%;
+	}
+}
+
+/* Subtitle */
+.introdution-subtitle {
+	@include subtitle-style;
+
+	font-size: .7em;
+	margin-top: 2.5em;
+}
+
+/* Button */
+.introdution-button {
+	padding-top: 4em;
+}
+
+/*******************************
+        Media-Queries
+*******************************/
+@media (min-width: 768px) {
+	.introdution {
+	}
+	.introdution-title {
+		font-size: 5em;
+	}
+	.introdution-subtitle {
+		font-size: 1em;
+	}
+	.introdution-btn {
+		transition: box-shadow 1s, transform 1s;
+	}
+	.introdution-btn:hover,
+	.introdution-btn:focus {
+		transform: translateY(-5px);
+		box-shadow: 0 0 0 99999px rgba(0,0,0,.8);
+	}
+
+}
+
+@media (min-width: 992px) {
+	.introdution {
+	}
+	.introdution-title {
+		font-size: 3.2em;
+		line-height: 1.2em;
+	}
+}

@@ -13,16 +13,16 @@
   <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet' type='text/css'>
   <link href='https://fonts.googleapis.com/css?family=Roboto+Slab' rel='stylesheet' type='text/css'>
 
-  <link rel="stylesheet" href="css/style.css">
-  <script src="js/vendor/modernizr-2.8.3.min.js"></script>
+  <link rel="stylesheet" href="dist/css/style.min.css">
+  <script src="dist/js/vendor/modernizr-2.8.3.min.js"></script>
 </head>
 <body>
   <!--[if lt IE 8]>
   <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
   <![endif]-->
 
-  <header class="header container">
-    <span class="header-logo">Logo</span>
+  <header class="header">
+    <!--<span class="header-logo">Logo</span>-->
     <h1 class="header-title">
       TreeHouse
     </h1>
@@ -45,38 +45,40 @@
       </h3>
       <h3 class="introdution-subtitle">Proin iaculis purus consequat sem cure.</h3>
       <div class="introdution-button">
-        <button class="introdution-btn btn btn-success">View Portfolio</button>
+        <a href="#" class="introdution-btn btn btn-success">
+            View Portfolio
+        </a>
       </div>
     </section> <!--/.introduction-->
 
     <section class="service">
-      <h1 class="service-title">Professional Services</h1>
+      <h1 class="title">Professional Services</h1>
       <h3 class="service-subtitle">Proin iaculis purus consequat sem cure.</h3>
       <div class="service-item">
-        <img src="/img/block/service/heart.svg" alt="Heart"/>
+        <img src="/dist/img/block/service/heart.svg" alt="Heart"/>
         <h4 class="service-item-title">Beatifil Design</h4>
         <p class="service-item-description">Proin iaculis purus consequat sem cure digni ssim. Donec porttitora entum suscipit aenean rhoncus posuere odio in tincidunt.</p>
       </div>
       <div class="service-item">
-        <img src="/img/block/service/mobile.svg" alt="Mobile"/>
+        <img src="/dist/img/block/service/mobile.svg" alt="Mobile"/>
         <h4 class="service-item-title">Responsive Web</h4>
         <p class="service-item-description">Proin iaculis purus consequat sem cure digni ssim. Donec porttitora entum suscipit aenean rhoncus posuere odio in tincidunt.</p>
       </div>
       <div class="service-item">
-        <img src="/img/block/service/graph.svg" alt="Graph"/>
+        <img src="/dist/img/block/service/graph.svg" alt="Graph"/>
         <h4 class="service-item-title">Marketing Tools</h4>
         <p class="service-item-description">Proin iaculis purus consequat sem cure digni ssim. Donec porttitora entum suscipit aenean rhoncus posuere odio in tincidunt.</p>
       </div>
     </section> <!--/.service-->
 
     <section class="lifting">
-      <div class="lifting-container">
         <div class="lifting-left-bar">
-          <img src="/img/block/lifting/icon-conf.png" width="200" height="416" alt=""/>
+          <img src="dist/img/block/lifting/icon-conf.png" width="200" height="416" alt=""/>
         </div>
-        <div class="lifting-description">
-          <div class="lifting-description-text-area">
-            <h1 class="lifting-description-title">JUST RELAX <span class="text-success">&</span>
+        <div class="lifting-right-bar">
+          <div class="lifting-description">
+            <h1 class="lifting-description-title">
+              JUST RELAX <span class="text-success">&</span>
               <span>LET US DO THE HEAVY LIFTING</span>
             </h1>
             <h3 class="lifting-description-subtitle">
@@ -90,10 +92,15 @@
             <div class="lifiting-button">
               <input type="submit" value="LEARN MORE" class="btn btn-success"/>
             </div>
-          </div> <!--/.lifting-description-text-area-->
-        </div> <!--/.lifting-description-->
-      </div> <!--/.container-->
-    </section> <!--/.section-->
+          </div> <!--/.lifting-description-->
+        </div> <!--/.lifting-right-bar-->
+    </section> <!--/.lifting-->
+    <section class="latest">
+        <div>
+        <h1 class="title">Latest Projects</h1>
+        <h3 class="service-subtitle">Proin iaculis purus consequat sem cure.</h3>
+      </div>
+    </section>
   </main>
 
   <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>

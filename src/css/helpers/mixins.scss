@@ -1,0 +1,16 @@
+
+@mixin image-background($url) {
+  background: linear-gradient(
+		rgba(0, 0, 0, 0.6),
+		rgba(0, 0, 0, 0.6)
+	),url($url) no-repeat;
+}
+
+@mixin subtitle-style($color: $color-snow) {
+    color: $color;
+    font-family: 'Roboto Slab', serif;
+}
+
+@mixin container($top-bottom: 20px) {
+  padding: $top-bottom 10%;
+}
