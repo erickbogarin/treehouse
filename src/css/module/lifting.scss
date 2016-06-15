@@ -1,0 +1,143 @@
+/*******************************
+            Lifting
+*******************************/
+.lifting {
+  color: $color-white;
+
+  @media #{$screen-md-min} {
+    display: flex;
+  }
+
+  // -----------
+  // Left-Column
+  //------------
+  &-left-bar {
+    background-color: $color-mintcream;
+    display: none;
+    padding: 10% 0;
+    position:relative;
+
+    @media #{$screen-md-min} {
+      display: block;
+      flex: 1 1 30%;
+
+      img {
+        margin-top: 40px;
+        position: absolute;
+        right: 0;
+        top: 0;
+      }
+    }
+  }
+
+  // -----------
+  // Right-Column
+  //------------
+  &-right-bar {
+    @include image-background("/dist/img/block/lifting/backgroud.png");
+    position:relative;
+    width: 100%;
+    height: auto;
+
+    @media #{$screen-md-min} {
+      flex: 1 1 70%;
+    }
+  }
+}
+
+/*------------------------
+  Description Text-Area
+--------------------------*/
+.lifting-description {
+  padding: 10%;
+
+  // -----------
+  // Title
+  //------------
+  &-title {
+    @extend %title-style;
+    line-height: 1.4;
+    white-space: pre-line;
+
+    span{
+      font-size: 0.9em;
+    }
+
+    @media #{$screen-sm-min} {
+      font-size: 1.8em;
+    }
+    @media #{$screen-md-min} {
+      font-size: 2em;
+    }
+  }
+
+  // -----------
+  // Subtitle
+  //------------
+  &-subtitle {
+    @include subtitle-style($color-snow);
+    font-size: .7em;
+    padding-top: .5em;
+    text-align: justify;
+
+    @media #{$screen-md-min} {
+      font-size: 1em;
+    }
+  }
+
+  // -----------
+  // Features Text-Area
+  //------------
+  &-features {
+    padding: 1em 0;
+  }
+}
+
+/*--------------
+  Feature Items
+---------------*/
+.lifting-feature-item {
+  @include subtitle-style;
+  font-size: .7em;
+  padding-bottom: 1.4em;
+
+  @media #{$screen-sm-min} {
+    padding-bottom: .8em;
+  }
+}
+
+/*------------------------
+  Lifting Checkmark-Icon
+--------------------------*/
+.lifiting-checkmark {
+  background: url("/dist/img/block/lifting/icon-checkmark.svg") no-repeat;
+  padding-right: .75em;
+  height: 32px;
+  width: 32px;
+  text-indent: -9999px;
+
+  display: inline-block;
+  vertical-align: middle;
+}
+
+/*---------------------------------------
+  Feature-Item/Checkmark-Icon -> Hover
+-----------------------------------------*/
+.lifting-feature-item:hover .lifiting-checkmark {
+  transform: rotateZ(-5deg);
+}
+
+.lifting-feature-item:hover {
+  transform: scale(1.04);
+  transition: transform 0.4s;
+  transition-delay: 0s, 0.4s;
+}
+
+/*-----------------------------
+  Feature Item -> KeyFrames
+------------------------------*/
+@keyframes spin {
+  100% {
+    transform:rotate(360deg);
+  }
+}

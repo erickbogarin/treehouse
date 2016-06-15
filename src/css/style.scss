@@ -7,22 +7,63 @@
  *
  */
 
-// Helpers
-@import "helpers/variables";
-@import "helpers/mixins";
-@import "helpers/placeholders";
+ // --------------------------------------------------
+ // STYLE.SCSS
+ // --------------------------------------------------
+ // This is the main SCSS file that imports everything
+ // that gets compiled into style.css
 
-// Base
+ // Import order:
+ // 1.  Encoding
+ // 2.  Variables
+ // 3.  Normalize
+ // 4.  Helpers
+ //
+ // SMACSS Architecture
+ // 6.  Base
+ // 7.  Layout
+ // 8.  Modules
+ // 9.  State
+ // 10. Theme
+
+ //
+ // 1. Encoding
+ // --------------------------------------------------
+ @charset 'UTF-8';
+
+ //
+ // 2. Variables
+ // --------------------------------------------------
+@import "base/config";
+
+
+//
+// 3. Global base layout
+// --------------------------------------------------
+// Source:
+// - Normalize: https://necolas.github.io/normalize.css/
+// - Reset: http://cssreset.com/scripts/eric-meyer-reset-css/
 @import "base/normalize";
 @import "base/reset";
 
-// Layout
+
+//
+// 3. Helpers
+// --------------------------------------------------
+@import "helpers/placeholders";
+@import "helpers/mixins";
+
+//
+// 4. Layout
+//
 @import "layout/site";
 @import "layout/header.scss";
-@import "layout/menu.scss";
+@import "layout/button.scss";
 
-// Blocks
-@import "block/introdution.scss";
-@import "block/service.scss";
-@import "block/lifting.scss";
-@import "block/latest.scss";
+//
+// Modules
+//
+@import "module/introdution.scss";
+@import "module/service.scss";
+@import "module/lifting.scss";
+@import "module/latest.scss";

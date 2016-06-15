@@ -8,9 +8,9 @@
 
 @mixin subtitle-style($color: $color-snow) {
     color: $color;
-    font-family: 'Roboto Slab', serif;
+    @extend %subtitle-font-family;
 }
 
-@mixin container($top-bottom: 20px) {
-  padding: $top-bottom 10%;
+@mixin padding-height($size: 20px) {
+  padding: $size 10%;
 }

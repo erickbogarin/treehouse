@@ -1,0 +1,68 @@
+/*******************************
+					Service
+*******************************/
+.service {
+	@include padding-height(20%);
+	@extend %text-center;
+
+	@media #{$screen-sm-min} {
+		@include padding-height(7%);
+	}
+
+	// -------------
+	//	 Title
+	// --------------
+	.title {
+		font-size: 1.75em;
+
+		@media #{$screen-sm-min} {
+			font-size: 2em;
+		}
+	}
+
+	// -------------
+	//	 Subtitle
+	// --------------
+	&-subtitle {
+		@include subtitle-style($color-silver);
+
+		margin-top: 1em;
+	}
+
+	// -------------
+	//	 Items
+	// --------------
+	&-item {
+		padding-top: 2.75em;
+
+		@media #{$screen-md-min} {
+			width: 33%;
+			padding-top: 5%;
+			display: inline-block;
+			vertical-align: middle;
+		}
+
+		&:hover {
+			-webkit-transform: scale(1.3);
+			-ms-transform: scale(1.3);
+			transform: scale(1.3);
+		}
+
+		&-title {
+			@extend %title-style;
+			padding-top: 1.2em;
+		}
+
+		&-description {
+			@include subtitle-style($color-silver);
+
+			font-size: 1em;
+			line-height: 2em;
+			text-align: center;
+
+			@media #{$screen-md-min} {
+				font-size: .7em;
+			}
+		}
+	} // item
+}
