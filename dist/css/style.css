@@ -426,14 +426,14 @@ table {
   border-collapse: collapse;
   border-spacing: 0; }
 
-.title, .introdution-title, .service-item-title, .lifting-description-title {
+.title, .introdution-title, .service-item-title, .lifting-description-title, .latest-description-title {
   text-transform: uppercase;
   font-weight: bold; }
 
-.introdution, .service {
+.introdution, .service, .latest .title, .latest-subtitle {
   text-align: center; }
 
-.introdution-subtitle, .service-subtitle, .service-item-description, .lifting-description-subtitle, .lifting-feature-item {
+.introdution-subtitle, .service-subtitle, .service-item-description, .lifting-description-subtitle, .lifting-feature-item, .latest-subtitle, .latest-description-subtitle {
   font-family: 'Roboto Slab', serif; }
 
 /*! HTML5 Boilerplate v5.3.0 | MIT License | https://html5boilerplate.com/ */
@@ -968,9 +968,32 @@ textarea {
     -webkit-transform: rotate(360deg);
             transform: rotate(360deg); } }
 
+/*******************************
+            Latest
+*******************************/
 .latest {
-  clear: both;
-  padding-top: 5%; }
-
-.latest h1 {
-  font-size: 1.75em; }
+  padding: 20% 10%; }
+  @media (min-width: 768px) {
+    .latest {
+      padding: 7% 10%; } }
+  .latest .title {
+    font-size: 1.75em; }
+  .latest-subtitle {
+    color: #777777;
+    margin-top: 1em;
+    margin-bottom: 5em; }
+  @media (min-width: 980px) {
+    .latest-description {
+      float: left;
+      width: 40%; } }
+  .latest-description-subtitle {
+    color: #777777;
+    margin-top: 1em; }
+  .latest-image {
+    display: none; }
+    @media (min-width: 980px) {
+      .latest-image {
+        display: block;
+        float: right;
+        position: absolute;
+        right: 0; } }

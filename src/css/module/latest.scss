@@ -1,7 +1,60 @@
+/*******************************
+            Latest
+*******************************/
 .latest {
-  clear: both;
-  padding-top: 5%;
-}
-.latest h1 {
-  font-size: 1.75em;
+  @include padding-height(20%);
+
+  @media #{$screen-sm-min} {
+    @include padding-height(7%);
+  }
+
+  // -------------
+  //	 Title
+  // --------------
+  & .title {
+    @extend %text-center;
+    font-size: 1.75em;
+  }
+
+  // -------------
+  //	 Subtitle
+  // --------------
+  &-subtitle {
+    @extend %text-center;
+    @include subtitle-style($color-silver);
+    margin-top: 1em;
+    margin-bottom: 5em;
+  }
+
+  // -------------
+  //	Description
+  // --------------
+  &-description {
+    @media #{$screen-md-min} {
+      float: left;
+      width: 40%;
+    }
+
+    &-title {
+      @extend %title-style;
+    }
+
+    &-subtitle {
+      @include subtitle-style($color-silver);
+      margin-top: 1em;
+    }
+  }
+
+  // -------------
+  //	 Ipad Image
+  // --------------
+  &-image {
+    display: none;
+    @media #{$screen-md-min} {
+      display: block;
+      float: right;
+      position: absolute;
+      right: 0;
+    }
+  }
 }
