@@ -1,3 +1,5 @@
 # External tool builders
 /node_modules
 /node_modules/**/*
+.sass-cache
+.sass-cache/*

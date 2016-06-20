@@ -1,5 +1,5 @@
 /*******************************
-            Latest
+          Latest
 *******************************/
 .latest {
   @include padding-height(20%);
@@ -23,7 +23,10 @@
     @extend %text-center;
     @include subtitle-style($color-silver);
     margin-top: 1em;
-    margin-bottom: 5em;
+    margin-bottom: 2em;
+    @media #{$screen-md-min} {
+      margin-bottom: 5em;
+    }
   }
 
   // -------------
@@ -32,7 +35,7 @@
   &-description {
     @media #{$screen-md-min} {
       float: left;
-      width: 40%;
+      width: 60%;
     }
 
     &-title {
@@ -42,7 +45,49 @@
     &-subtitle {
       @include subtitle-style($color-silver);
       margin-top: 1em;
+      &:last-child {
+        padding-top: 2%;
+      }
+      @media #{$screen-md-min} {
+        width: 60%;
+        padding-bottom: 3%;
+      }
     }
+  }
+
+  // -------------
+  //	 Feature
+  // --------------
+  &-feature {
+    padding-top: 10%;
+    text-align: center;
+    @media #{$screen-md-min} {
+      padding-top: 2%;
+      text-align: left;
+    }
+    &-item {
+      @media #{$screen-md-min} {
+        display: inline-block;
+        margin-right: 2%;
+        vertical-align: middle;
+      }
+    }
+    &-title {
+      font-size: 1em;
+      font-weight: bold;
+      padding-bottom: 2%;
+    }
+    &-description {
+      @include subtitle-style($color-silver);
+      font-size: 0.85em;
+    }
+  }
+
+  // -------------
+  //	 Details Link
+  // --------------
+  &-details {
+    text-transform: uppercase;
   }
 
   // -------------
@@ -57,4 +102,14 @@
       right: 0;
     }
   }
+}
+
+// -------------
+//	 Sprite Icons
+// --------------
+@include all-icon-sprites;
+.icon-sprite {
+  display: inline-block;
+  width: 73px;
+  height: 74px;
 }
