@@ -2,7 +2,7 @@
 					Introdution
 *******************************/
 .introdution {
-	@include image-background("/dist/img/block/title/background.png");
+	@include image-background("block/title/background.png");
 	max-width: 100%;
 	background-size: cover;
 

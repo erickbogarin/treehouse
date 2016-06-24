@@ -9,24 +9,18 @@
   }
 
   // -------------
-  //	 Title
+  //	 Content
   // --------------
-  & .title {
-    @extend %text-center;
-    font-size: 1.75em;
+  &-content {
+    display: flex;
   }
 
+
   // -------------
-  //	 Subtitle
+  //	 Title & Subtitle
   // --------------
-  &-subtitle {
+  & .title, .subtitle {
     @extend %text-center;
-    @include subtitle-style($color-silver);
-    margin-top: 1em;
-    margin-bottom: 2em;
-    @media #{$screen-md-min} {
-      margin-bottom: 5em;
-    }
   }
 
   // -------------
@@ -34,8 +28,7 @@
   // --------------
   &-description {
     @media #{$screen-md-min} {
-      float: left;
-      width: 60%;
+      flex: 1;
     }
 
     &-title {
@@ -49,10 +42,16 @@
         padding-top: 2%;
       }
       @media #{$screen-md-min} {
-        width: 60%;
+        width: 40%;
         padding-bottom: 3%;
       }
     }
+    &-bottom {
+      @media #{$screen-md-max} {
+        padding-top: 2%;
+      }
+    }
+
   }
 
   // -------------
@@ -80,6 +79,9 @@
     &-description {
       @include subtitle-style($color-silver);
       font-size: 0.85em;
+      @media #{$screen-md-max} {
+        padding-top: 4%;
+      }
     }
   }
 
@@ -88,6 +90,11 @@
   // --------------
   &-details {
     text-transform: uppercase;
+    display: block;
+    @media #{$screen-md-max} {
+      padding-top: 10%;
+      text-align: center;
+    }
   }
 
   // -------------
@@ -96,8 +103,8 @@
   &-image {
     display: none;
     @media #{$screen-md-min} {
-      display: block;
-      float: right;
+      flex: 1;
+      display: block  ;
       position: absolute;
       right: 0;
     }
@@ -107,9 +114,14 @@
 // -------------
 //	 Sprite Icons
 // --------------
-@include all-icon-sprites;
-.icon-sprite {
+.icon {
   display: inline-block;
-  width: 73px;
-  height: 74px;
+  background: $icons;
+}
+
+@each $i in sprite_names($icons) {
+  .icon-#{$i}  {
+    background-position: sprite-position($icons, $i);
+    @include sprite-dimensions($icons, $i);
+  }
 }

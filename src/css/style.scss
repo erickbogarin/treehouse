@@ -26,8 +26,10 @@
  // 9.  State
  // 10. Theme
 
+@import "compass";
 
-@import "block/latest/icon/*.png";
+//@import "block/latest/icon/*.png";
+$icons: sprite-map("icons/*.png");
 
  //
  // 1. Encoding
@@ -70,3 +72,4 @@
 @import "module/service.scss";
 @import "module/lifting.scss";
 @import "module/latest.scss";
+@import "module/values.scss"

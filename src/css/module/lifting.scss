@@ -34,7 +34,7 @@
   // Right-Column
   //------------
   &-right-bar {
-    @include image-background("/dist/img/block/lifting/backgroud.png");
+    @include image-background("block/lifting/backgroud.png");
     position:relative;
     width: 100%;
     height: auto;

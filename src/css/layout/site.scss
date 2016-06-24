@@ -29,13 +29,34 @@ body {
     }
 }
 
+// -------------
+//	 Title
+// --------------
 .title {
   @extend %title-style;
+  font-size: 1.75em;
+
+  @media #{$screen-sm-min} {
+    font-size: 2em;
+  }
+}
+
+// -------------
+//	 Subtitle
+// --------------
+.subtitle {
+  @include subtitle-style($color-silver);
+  margin-top: 1em;
+  margin-bottom: 2em;
+  @media #{$screen-md-min} {
+    margin-bottom: 5em;
+  }
 }
 
 .text-success {
   color: rgb(124, 197, 118);
 }
+
 
 /*
  * Remove text-shadow in selection highlight:
@@ -206,6 +227,9 @@ textarea {
     clear: both;
 }
 
+.clearfix {
+  clear: both;
+}
 /* ==========================================================================
    EXAMPLE Media Queries for Responsive Design.
    These examples override the primary ('mobile first') styles.
