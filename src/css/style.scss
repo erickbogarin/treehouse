@@ -28,7 +28,6 @@
 
 @import "compass";
 
-//@import "block/latest/icon/*.png";
 $icons: sprite-map("icons/*.png");
 
  //
@@ -62,14 +61,21 @@ $icons: sprite-map("icons/*.png");
 // 4. Layout
 //
 @import "layout/site";
-@import "layout/header.scss";
-@import "layout/button.scss";
+@import "layout/header";
+@import "layout/button";
 
 //
 // Modules
 //
-@import "module/introdution.scss";
-@import "module/service.scss";
-@import "module/lifting.scss";
-@import "module/latest.scss";
-@import "module/values.scss"
+@import "module/introdution";
+@import "module/menu";
+@import "module/service";
+@import "module/lifting";
+@import "module/latest";
+@import "module/standard";
+
+
+//
+// State
+//
+@import "state/state";

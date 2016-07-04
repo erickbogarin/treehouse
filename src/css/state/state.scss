@@ -1,0 +1,23 @@
+@media not all and #{$screen-md-max} {
+    [data-state="hidden"] {
+        display: none;
+    }
+}
+
+@media #{$screen-md-max} {
+    .menu-active .header-menu {
+        left: 0;
+    }
+    .menu-active:after {
+        content: "";
+        display: block;
+
+        position: fixed;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+
+        background: rgba(0,0,0,0.4);
+    }
+}

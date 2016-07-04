@@ -40,7 +40,8 @@
 			text-align: center;
 
 			@media #{$screen-md-min} {
-				font-size: .7em;
+				padding-top: 1.75em;
+                font-size: .7em;
 			}
 		}
 	} // item

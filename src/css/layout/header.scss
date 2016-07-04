@@ -27,55 +27,13 @@
 	display: inline;
 	vertical-align: middle;
 
-	&::before {
+	&:before {
 		content: '';
-		background: url("/dist/img/block/header/leaf.svg") no-repeat;
+		background-image: url("/dist/img/block/header/leaf.svg") no-repeat;
 		width: 29px;
 		height: 29px;
 
 		display:inline-block;
 		vertical-align: middle;
-	}
-}
-
-/*--------------
- Menu
----------------*/
-.header-menu {
-	float: right;
-
-	@media #{$screen-md-max} {
-		left: -90%;
-		position: fixed;
-		top: 0;
-		z-index: 1;
-	}
-}
-
-/*--------------
- Menu Items
----------------*/
-.header-menu-item {
-	@media #{$screen-md-min} {
-		color: $color-silver;
-		padding: 0 .5em;
-		text-transform: uppercase;
-
-		display: inline-block;
-		vertical-align: sub;
-
-		&:last-child {
-			padding: 0;
-		}
-
-		&:hover {
-			border-bottom: 5px solid black;
-			padding-bottom: 5px;
-			transition: all .15s ease-in-out;
-		}
-
-	}
-	@media #{$screen-md-min} {
-		padding: 0 1em;
 	}
 }

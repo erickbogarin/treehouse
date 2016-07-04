@@ -1,0 +1,86 @@
+/*******************************
+            Menu
+*******************************/
+.header-menu {
+	float: right;
+
+	@media #{$screen-md-max} {
+		background: #f0f0f0;
+		padding: 1em;
+		margin: 0;
+
+		height: 100vh;
+		width: 90%;
+		max-width: 250px;
+
+		position: fixed;
+		z-index: 1;
+		top: 0;
+		left: -100%;
+
+		transition: left 0.3s ease-out;
+
+        // Buttons Open and Close
+        &-open, &-close {
+            background: none;
+            border: 0;
+            outline: 0;
+            -webkit-appearance: none;
+            font-size: 1.6em;
+            text-indent: -999em;
+        }
+        // Open Button
+        &-open {
+            float: right;
+            height: 0;
+            width:.75em;
+            padding-top:.125em;
+            border-top: .375em double #000;
+            border-bottom: .125em solid #000;
+
+            vertical-align: middle;
+            margin: 0.5em;
+        }
+        // Close Button
+        &-close {
+            display: none;
+        }
+	}
+}
+
+/*--------------
+ Main menu
+---------------*/
+.main-menu {
+
+    // Items
+    &-item {
+        @media #{$screen-md-max} {
+            padding: 1em 0;
+            width: 100%;
+        }
+    	@media #{$screen-md-min} {
+    		color: $color-silver;
+    		padding: 0 .5em;
+    		text-transform: uppercase;
+
+    		display: inline-block;
+    		vertical-align: sub;
+
+    		&:last-child {
+    			padding: 0;
+    		}
+
+    		&:hover {
+    			border-bottom: 5px solid black;
+    			padding-bottom: 5px;
+    			transition: all .15s ease-in-out;
+    		}
+    	}
+    	@media #{$screen-md-min} {
+    		padding: 0 1em;
+    	}
+    }
+}
+
+

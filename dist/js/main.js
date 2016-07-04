@@ -3,11 +3,27 @@ function scrollBanner() {
   var headerText = document.querySelector('.introdution');
   scrollPos = window.scrollY;
 
-  if (scrollPos <= 600) {
-      headerText.style.opacity = 1 - (scrollPos/600);
-  }
+
+  headerText.style.opacity = 1 - (scrollPos/600);
+
 }
 window.addEventListener('scroll', scrollBanner);
+
+$headerMenuOpen = document.querySelector('.header-menu-open');
+
+$headerMenuOpen.onclick = function() {
+    document.documentElement.classList.add('menu-active');
+};
+
+document.querySelector('.header-menu-close').onclick = function() {
+    document.documentElement.classList.remove('menu-active');
+};
+
+document.documentElement.onclick = function(event) {
+    if (event.target === document.documentElement) {
+        document.documentElement.classList.remove('menu-active');
+    }
+};
 
 // Avoid `console` errors in browsers that lack a console.
 (function() {

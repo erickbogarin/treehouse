@@ -36,7 +36,8 @@
   &-right-bar {
     @include image-background("block/lifting/backgroud.png");
     position:relative;
-    width: 100%;
+    max-width: 100%;
+    background-size: cover;
     height: auto;
 
     @media #{$screen-md-min} {
