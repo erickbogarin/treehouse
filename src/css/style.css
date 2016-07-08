@@ -480,12 +480,23 @@ table {
   font-weight: bold;
 }
 
-.introdution, .service, .latest .title, .latest .subtitle, .standard {
+.introdution, .service, .latest .title, .latest .subtitle, .standard, .client {
   text-align: center;
 }
 
-.subtitle, .introdution-subtitle, .service-item-description, .lifting-description-subtitle, .lifting-feature-item, .latest-description-subtitle, .latest-feature-description, .standard-item-description {
+.subtitle, .introdution-subtitle, .service-item-description, .lifting-description-subtitle, .lifting-feature-item, .latest-description-subtitle, .latest-feature-description, .standard-item-description, .client-quote {
   font-family: 'Roboto Slab', serif;
+}
+
+@media (min-width: 980px) {
+  .client-area:nth-child(odd) .client-quote:before, .client-area:nth-child(even) .client-quote:after {
+    content: '';
+    background-color: #f9f9f9;
+    width: 2em;
+    height: 2em;
+    position: absolute;
+    top: 40%;
+  }
 }
 
 /*! HTML5 Boilerplate v5.3.0 | MIT License | https://html5boilerplate.com/ */
@@ -509,11 +520,22 @@ body {
 }
 
 .container {
-  padding: 0 5%;
+  padding-left: 5%;
+  padding-right: 5%;
 }
 @media (min-width: 980px) {
   .container {
-    padding: 0 10%;
+    padding-left: 10%;
+    padding-right: 10%;
+  }
+}
+
+section {
+  padding: 20% 10%;
+}
+@media (min-width: 980px) {
+  section {
+    padding: 5% 10%;
   }
 }
 
@@ -994,14 +1016,6 @@ textarea {
 /*******************************
 					Service
 *******************************/
-.service {
-  padding: 20% 10%;
-}
-@media (min-width: 768px) {
-  .service {
-    padding: 7% 10%;
-  }
-}
 @media (min-width: 980px) {
   .service-item {
     width: 33%;
@@ -1037,6 +1051,7 @@ textarea {
 *******************************/
 .lifting {
   color: white;
+  padding: 0;
 }
 @media (min-width: 980px) {
   .lifting {
@@ -1163,14 +1178,6 @@ textarea {
 /*******************************
           Latest
 *******************************/
-.latest {
-  padding: 20% 10%;
-}
-@media (min-width: 768px) {
-  .latest {
-    padding: 7% 10%;
-  }
-}
 .latest-content {
   display: flex;
 }
@@ -1295,7 +1302,6 @@ textarea {
 Values
 *******************************/
 .standard {
-  padding: 5% 10%;
   background-color: #f9f9f9;
 }
 @media (min-width: 980px) {
@@ -1332,6 +1338,66 @@ Values
 .standard-item-description {
   color: #777777;
   margin-top: 1em;
+}
+
+/*******************************
+            Client
+*******************************/
+.client-area {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding-bottom: 1em;
+}
+@media (min-width: 980px) {
+  .client-area:nth-child(odd) {
+    flex-direction: row;
+  }
+  .client-area:nth-child(even) {
+    flex-direction: row-reverse;
+  }
+  .client-area:nth-child(odd) .client-quote:before {
+    left: 0;
+    transform: translateX(-0.5em) rotate(45deg);
+  }
+  .client-area:nth-child(even) .client-quote:after {
+    right: 0;
+    transform: translateX(0.5em) rotate(45deg);
+  }
+}
+.client-procfile {
+  width: 8em;
+  height: 8em;
+  background-color: #f9f9f9;
+  border: 3px solid white;
+  border-radius: 50%;
+  display: block;
+  text-indent: -99999px;
+  margin: 0 1.75em;
+}
+@media (min-width: 980px) {
+  .client-procfile {
+    flex: 1 1 30%;
+    height: 15em;
+  }
+}
+.client-quote {
+  color: #777777;
+  background-color: #f9f9f9;
+  border: 3px solid white;
+  padding: 2em;
+}
+.client-quote .client-comment, .client-quote .client-author {
+  font-size: 1em;
+  padding-bottom: .4em;
+  line-height: 1.4em;
+}
+@media (min-width: 980px) {
+  .client-quote {
+    flex: 1 1 70%;
+    position: relative;
+  }
 }
 
 @media not all and (max-width: 980px) {

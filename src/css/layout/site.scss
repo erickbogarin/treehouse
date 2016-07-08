@@ -22,13 +22,20 @@ body {
 }
 
 .container {
-    padding: 0 5%;
-
+    padding-left: 5%;
+    padding-right: 5%;
     @media #{$screen-md-min} {
-      padding: 0 10%;
+      padding-left: 10%;
+      padding-right: 10%;
     }
 }
 
+section {
+    @include padding-height(20%);
+    @media #{$screen-md-min} {
+        @include padding-height(5%);
+    }
+}
 // -------------
 //	 Title
 // --------------

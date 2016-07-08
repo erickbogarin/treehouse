@@ -3,7 +3,6 @@ Values
 *******************************/
 .standard {
   @extend %text-center;
-  @include padding-height(5%);
   background-color: rgb(249, 249, 249);
 
   &-container {

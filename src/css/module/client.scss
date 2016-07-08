@@ -1,0 +1,84 @@
+/*******************************
+            Client
+*******************************/
+.client {
+    @extend %text-center;
+
+    // -------------
+    //   Client Area
+    // --------------
+    &-area {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        padding-bottom: 1em;
+
+        @media #{$screen-md-min} {
+            &:nth-child(odd) {
+                flex-direction: row;
+            }
+            &:nth-child(even) {
+                flex-direction: row-reverse;
+            }
+
+            // Triangules
+            &:nth-child(odd) .client-quote:before {
+                @extend %quote-triangle;
+                left: 0;
+                transform: translateX(-.5em) rotate(45deg);
+            }
+            &:nth-child(even) .client-quote:after {
+                @extend %quote-triangle;
+                right: 0;
+                transform: translateX(.5em) rotate(45deg);
+            }
+        }
+    }
+
+    // -------------
+    //   Procfile
+    // --------------
+    &-procfile {
+        width: 8em;
+        height: 8em;
+
+        background-color: rgb(249, 249, 249);
+        border: 3px solid rgb(255, 255, 255);
+        border-radius: 50%;
+
+        display: block;
+        text-indent: -99999px;
+
+        margin: 0 1.75em;
+
+        @media #{$screen-md-min} {
+            flex: 1 1 30%;
+            height: 15em;
+        }
+    }
+
+    // -------------
+    //   Quotes
+    // --------------
+    &-quote {
+        .client-comment, .client-author {
+            font-size: 1em;
+            padding-bottom: .4em;
+            line-height: 1.4em;
+        }
+        @include subtitle-style($color-silver);
+
+        background-color: rgb(249, 249, 249);
+        border: 3px solid rgb(255, 255, 255);
+
+        padding: 2em;
+
+        @media #{$screen-md-min} {
+            flex: 1 1 70%;
+            position: relative;
+
+        }
+    }
+
+}

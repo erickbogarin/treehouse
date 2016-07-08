@@ -2,12 +2,6 @@
           Latest
 *******************************/
 .latest {
-  @include padding-height(20%);
-
-  @media #{$screen-sm-min} {
-    @include padding-height(7%);
-  }
-
   // -------------
   //	 Content
   // --------------

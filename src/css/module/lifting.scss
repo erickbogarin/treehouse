@@ -3,7 +3,7 @@
 *******************************/
 .lifting {
   color: $color-white;
-
+  padding: 0;
   @media #{$screen-md-min} {
     display: flex;
   }
