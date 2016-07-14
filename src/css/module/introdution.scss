@@ -71,13 +71,13 @@
 @media (min-width: 768px) {
 	.introdution-btn {
 		box-sizing: border-box;
-    transition: box-shadow 1s, transform 1s;
+        transition: box-shadow 1s, transform 1s;
 		transition-delay: 1s, 0s;
 	}
 	.introdution-btn:hover,
 	.introdution-btn:focus {
 		transform: translateY(-5px);
 		box-shadow: 0 0 0 99999px rgba(0,0,0,.8);
-    transition-delay: 0s, 1s;
+        transition-delay: 0s, 1s;
 	}
 }
