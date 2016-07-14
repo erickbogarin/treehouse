@@ -1378,7 +1378,7 @@ Values
 }
 @media (min-width: 980px) {
   .client-procfile {
-    flex: 1 1 30%;
+    width: 15em;
     height: 15em;
   }
 }
@@ -1395,7 +1395,7 @@ Values
 }
 @media (min-width: 980px) {
   .client-quote {
-    flex: 1 1 70%;
+    flex: 1;
     position: relative;
   }
 }
