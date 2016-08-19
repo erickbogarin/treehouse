@@ -1,0 +1,63 @@
+/*******************************
+        Content Footer
+*******************************/
+.content-footer {
+
+    background-color: rgb(34, 34, 34);
+    color: $color-white;
+    display: flex;
+    flex-direction: column;
+
+    // Title
+    & .title {
+        font-weight: bold;
+        font-size: inherit;
+    }
+
+    // Info
+    &-info {
+        display: flex;
+        align-items: center;
+        padding-top: 1em;
+    }
+
+    // Paragraph
+    & p {
+        @extend %subtitle-font-family;
+        line-height: 1.2em;
+        padding-left: 1em;
+        width: 80%;
+        @media #{$screen-md-min} {
+            font-size: 0.75em;
+            width: 65%;
+        }
+    }
+
+    @media #{$screen-sm-max} {
+        align-items: center;
+        justify-content: center;
+    }
+
+    @media #{$screen-md-min} {
+        flex-direction: row;
+    }
+}
+
+/*--------------
+ Footer Column
+---------------*/
+.footer-column {
+
+    @media #{$screen-sm-max} {
+
+      margin-bottom: 3em;
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+
+    @media #{$screen-md-min} {
+        flex: 1;
+    }
+
+}

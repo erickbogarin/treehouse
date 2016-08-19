@@ -55,6 +55,18 @@
 
     // Items
     &-item {
+        &-info {
+            background-color: #535353;
+            box-sizing: border-box;
+            color: $color-white;
+            display: none;
+            padding: 1em;
+            position: absolute;
+            left: 0;
+            line-height: 1.5em;
+            text-align: center;
+            text-transform: capitalize;
+        }
         @media #{$screen-md-max} {
             padding: 1em 0;
             width: 100%;
@@ -67,15 +79,25 @@
     		display: inline-block;
     		vertical-align: sub;
 
+            transition: color 0.5s ease-in-out;
+
+            &:hover &-info, &:focus &-info {
+                display: block;
+                min-width: 100%;
+                animation: show 1s linear;
+            }
+
     		&:last-child {
     			padding: 0;
     		}
 
     		&:hover {
-    			border-bottom: 5px solid black;
+    			color: $color-success;
+                border-bottom: 5px solid black;
     			padding-bottom: 5px;
     			transition: all .15s ease-in-out;
     		}
+
     	}
     	@media #{$screen-md-min} {
     		padding: 0 1em;
@@ -83,4 +105,11 @@
     }
 }
 
-
+@keyframes show {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}

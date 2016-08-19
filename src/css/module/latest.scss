@@ -89,6 +89,12 @@
       padding-top: 10%;
       text-align: center;
     }
+    @media #{$screen-md-min} {
+        transition: transform 0.2s linear;
+        &:hover {
+            transform: translateX(5px);
+      }
+    }
   }
 
   // -------------
@@ -109,8 +115,9 @@
 //	 Sprite Icons
 // --------------
 .icon {
-  display: inline-block;
   background: $icons;
+  display: inline-block;
+  vertical-align: middle;
 }
 
 @each $i in sprite_names($icons) {

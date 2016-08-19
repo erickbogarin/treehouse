@@ -1,5 +1,5 @@
 /*******************************
-		        Header
+		    Header
 *******************************/
 .header {
 	padding-top: 8px;
@@ -17,7 +17,7 @@
 }
 
 /*--------------
- Title
+     Title
 ---------------*/
 .header-title {
 	color: rgb(85, 85, 85);
@@ -29,7 +29,7 @@
 
 	&:before {
 		content: '';
-		background-image: url("/dist/img/block/header/leaf.svg") no-repeat;
+		background: url("/dist/img/block/header/leaf.png") no-repeat;
 		width: 29px;
 		height: 29px;
 

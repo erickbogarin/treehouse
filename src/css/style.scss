@@ -29,7 +29,7 @@
 @import "compass";
 
 $icons: sprite-map("icons/*.png");
-
+$logos: sprite-map("logos/*.png");
  //
  // 1. Encoding
  // --------------------------------------------------
@@ -75,6 +75,8 @@ $icons: sprite-map("icons/*.png");
 @import "module/standard";
 @import "module/client";
 @import "module/contact.scss";
+@import "module/logos.scss";
+@import "module/content-footer.scss";
 
 //
 // State

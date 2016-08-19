@@ -10,7 +10,7 @@
 	// --------------
 	&-item {
 		@media #{$screen-md-min} {
-			width: 33%;
+            width: 33%;
 			display: inline-block;
 			vertical-align: middle;
 		}
@@ -25,7 +25,9 @@
 		}
 		&-title {
 			@extend %title-style;
-			padding-top: 1.2em;
+			@media #{$screen-md-min} {
+                padding-top: 3em;
+            }
 		}
 
 		&-description {
@@ -34,9 +36,11 @@
 			font-size: 1em;
 			line-height: 2em;
 			text-align: center;
+            padding-top: 1em;
+            padding-bottom: 1em;
 
 			@media #{$screen-md-min} {
-				padding-top: 1.75em;
+                padding-top: 1.75em;
                 font-size: .7em;
 			}
 		}
