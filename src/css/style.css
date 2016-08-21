@@ -1057,6 +1057,9 @@ textarea {
     transform: scale(1.3);
   }
 }
+.service-item-title {
+  padding-top: 1em;
+}
 @media (min-width: 980px) {
   .service-item-title {
     padding-top: 3em;
@@ -1255,7 +1258,11 @@ textarea {
 .latest-feature-title {
   font-size: 1em;
   font-weight: bold;
-  padding-bottom: 2%;
+}
+@media (max-width: 768px) {
+  .latest-feature-title {
+    padding-top: 1em;
+  }
 }
 .latest-feature-description {
   color: #777777;
@@ -1651,6 +1658,37 @@ Values
 @media (min-width: 980px) {
   .footer-column {
     flex: 1;
+  }
+}
+
+/*******************************
+          Footer
+*******************************/
+.footer {
+  color: #555555;
+  font-size: 14px;
+  font-family: "Montserrat";
+}
+.footer-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+@media (min-width: 980px) {
+  .footer-content {
+    flex-direction: row;
+    justify-content: flex-start;
+  }
+}
+@media (max-width: 768px) {
+  .footer-social {
+    padding-top: 1em;
+  }
+}
+@media (min-width: 980px) {
+  .footer-social {
+    position: absolute;
+    left: 40%;
   }
 }
 

@@ -25,7 +25,8 @@
 		}
 		&-title {
 			@extend %title-style;
-			@media #{$screen-md-min} {
+            padding-top: 1em;
+     		@media #{$screen-md-min} {
                 padding-top: 3em;
             }
 		}

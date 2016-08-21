@@ -1,0 +1,29 @@
+/*******************************
+          Footer
+*******************************/
+.footer {
+    color: rgb(85, 85, 85);
+    font-size: 14px;
+    font-family: "Montserrat";
+
+    &-content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        @media #{$screen-md-min} {
+            flex-direction: row;
+            justify-content: flex-start;
+        }
+    }
+
+    &-social {
+        @media #{$screen-sm-max} {
+           padding-top: 1em;
+        }
+        @media #{$screen-md-min} {
+            position: absolute;
+            left: 40%;
+        }
+    }
+}
