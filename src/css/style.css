@@ -829,7 +829,7 @@ textarea {
 }
 .header-title:before {
   content: '';
-  background: url("/dist/img/block/header/leaf.png") no-repeat;
+  background: url("../../dist/img/block/header/leaf.png") no-repeat;
   width: 29px;
   height: 29px;
   display: inline-block;
@@ -1179,7 +1179,7 @@ textarea {
   Lifting Checkmark-Icon
 --------------------------*/
 .lifiting-checkmark {
-  background: url("/dist/img/block/lifting/icon-checkmark.svg") no-repeat;
+  background: url("../../img/block/lifting/icon-checkmark.svg") no-repeat;
   padding-right: .75em;
   height: 32px;
   width: 32px;
