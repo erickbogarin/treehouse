@@ -85,6 +85,7 @@
                 display: block;
                 min-width: 100%;
                 animation: show 1s linear;
+                z-index: 1;
             }
 
     		&:last-child {

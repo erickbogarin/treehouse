@@ -540,6 +540,17 @@ body {
   }
 }
 
+.header-paralax {
+  position: fixed;
+  min-width: 100%;
+}
+
+.paralex-content {
+  position: relative;
+  top: 500px;
+  background-color: #fff;
+}
+
 section {
   padding: 20% 10%;
 }
@@ -1025,6 +1036,7 @@ textarea {
     display: block;
     min-width: 100%;
     animation: show 1s linear;
+    z-index: 1;
   }
   .main-menu-item:last-child {
     padding: 0;
