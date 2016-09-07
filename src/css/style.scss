@@ -60,6 +60,7 @@ $logos: sprite-map("logos/*.png");
 //
 // 4. Layout
 //
+@import "layout/grid";
 @import "layout/site";
 @import "layout/header";
 @import "layout/button";

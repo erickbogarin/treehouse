@@ -34,7 +34,7 @@
   // Right-Column
   //------------
   &-right-bar {
-    @include image-background("block/lifting/backgroud.png");
+    @include image-background("../img/block/lifting/backgroud.png");
     position:relative;
     max-width: 100%;
     background-size: cover;
@@ -111,7 +111,7 @@
   Lifting Checkmark-Icon
 --------------------------*/
 .lifiting-checkmark {
-  background: url("../../img/block/lifting/icon-checkmark.svg") no-repeat;
+  background: url("../img/block/lifting/icon-checkmark.svg") no-repeat;
   padding-right: .75em;
   height: 32px;
   width: 32px;

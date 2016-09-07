@@ -3,7 +3,7 @@
   background: linear-gradient(
 		rgba(0, 0, 0, 0.6),
 		rgba(0, 0, 0, 0.6)
-	),inline-image($url) no-repeat;
+	), url($url) no-repeat;
 }
 
 @mixin subtitle-style($color: $color-snow) {
@@ -13,4 +13,10 @@
 
 @mixin padding-height($size: 20px) {
   padding: $size 10%;
+}
+
+@mixin col($col-num) {
+    width: ((100% * $col-num) /12) - ($margin-col * 2);
+    margin: $margin-col;
+    box-sizing: border-box;
 }
