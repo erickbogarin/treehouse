@@ -540,19 +540,24 @@ body {
   }
 }
 
-.header-paralax {
-  position: fixed;
-  min-width: 100%;
+@media (min-width: 980px) {
+  .header-paralax {
+    position: fixed;
+    min-width: 100%;
+  }
 }
 
-.paralex-content {
-  position: relative;
-  top: 500px;
-  background-color: #fff;
+@media (min-width: 980px) {
+  .paralex-content {
+    position: relative;
+    top: 350px;
+    background-color: #fff;
+    top: 500px;
+  }
 }
 
 section {
-  padding: 20% 10%;
+  padding: 10% 10%;
 }
 @media (min-width: 980px) {
   section {
@@ -1015,7 +1020,7 @@ textarea {
   left: 0;
   line-height: 1.5em;
   text-align: center;
-  text-transform: capitalize;
+  text-transform: initial;
 }
 @media (max-width: 980px) {
   .main-menu-item {
@@ -1031,11 +1036,12 @@ textarea {
     display: inline-block;
     vertical-align: sub;
     transition: color 0.5s ease-in-out;
+    /* menu-info hover */
   }
   .main-menu-item:hover .main-menu-item-info, .main-menu-item:focus .main-menu-item-info {
     display: block;
     min-width: 100%;
-    animation: show 1s linear;
+    animation: show 0.2s linear;
     z-index: 1;
   }
   .main-menu-item:last-child {
@@ -1065,6 +1071,9 @@ textarea {
 /*******************************
 					Service
 *******************************/
+.service-item {
+  background: white;
+}
 @media (min-width: 980px) {
   .service-item {
     width: 25.33333%;

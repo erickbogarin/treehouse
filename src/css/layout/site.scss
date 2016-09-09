@@ -30,18 +30,23 @@ body {
 }
 
 .header-paralax {
-    position: fixed;
-    min-width: 100%;
+    @media #{$screen-md-min} {
+        position: fixed;
+        min-width: 100%;
+    }
 }
 
 .paralex-content {
+    @media #{$screen-md-min} {
     position: relative;
-    top: 500px;
+    top: 350px;
     background-color: #fff;
+        top: 500px;
+    }
 }
 
 section {
-    @include padding-height(20%);
+    @include padding-height(10%);
     @media #{$screen-md-min} {
         @include padding-height(5%);
     }

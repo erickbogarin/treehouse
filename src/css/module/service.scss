@@ -9,6 +9,7 @@
 	//	 Items
 	// --------------
 	&-item {
+        background: white;
 		@media #{$screen-md-min} {
             @include col(4);
             transition: transform 0.3s ease-in-out;

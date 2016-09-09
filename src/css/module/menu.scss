@@ -65,7 +65,7 @@
             left: 0;
             line-height: 1.5em;
             text-align: center;
-            text-transform: capitalize;
+            text-transform: initial;
         }
         @media #{$screen-md-max} {
             padding: 1em 0;
@@ -81,10 +81,11 @@
 
             transition: color 0.5s ease-in-out;
 
+            /* menu-info hover */
             &:hover &-info, &:focus &-info {
                 display: block;
                 min-width: 100%;
-                animation: show 1s linear;
+                animation: show 0.2s linear;
                 z-index: 1;
             }
 
