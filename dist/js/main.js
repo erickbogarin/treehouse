@@ -1,8 +1,41 @@
-document.onreadystatechange = function () {
+setTimeout(function () {
+
+    var $headerMenuOpen = document.querySelector('.header-menu-open');
+    $headerMenuOpen.onclick = function() {
+        document.documentElement.classList.add('menu-active');
+    };
+
+    document.querySelector('.header-menu-close').onclick = function() {
+        document.documentElement.classList.remove('menu-active');
+    };
+
+    document.documentElement.onclick = function(event) {
+        if (event.target === document.documentElement) {
+            document.documentElement.classList.remove('menu-active');
+        }
+    };
+}, 200);
+
+(function () {
+
+    // fires events every 200ms
+    function throttle(fn) {
+        fn.running = false;
+
+        return function() {
+            if(fn.run) return;
+            fn.running = true;
+            setTimeout(function() {
+                fn.running = false;
+            }, 200);
+
+            fn();
+        };
+    }
 
     if(screen && screen.width > 900) {
-        /* header scroll */
-        function scrollBanner() {
+        // header parallax
+        function scrollHeader() {
           var header = document.querySelector('.introdution');
           var headerText = document.querySelector('.introdution-title');
           var scrollPos = window.scrollY;
@@ -14,40 +47,29 @@ document.onreadystatechange = function () {
               headerText.style.opacity = 1 - (scrollPos/600);
           }
         }
-        window.addEventListener('scroll', scrollBanner);
+        window.addEventListener('scroll', throttle(scrollHeader));
 
-        /* service items scroll */
-        function scrollServices() {
+        // float parallax in .service .item-x
+        function scrollItems() {
+
             var wScroll = window.scrollY;
+            var styleItemLeft = document.querySelector('.item-1').style;
+            var styleItemRight = document.querySelector('.item-3').style;
 
             var elementTop =  document.querySelector('.service').getBoundingClientRect().top;
             if(wScroll > elementTop - window.innerHeight){
-
                 var offset = (Math.min(0, wScroll - elementTop + window.innerHeight - 350)).toFixed();
 
-                document.querySelector('.item-1').style.transform = 'translate('+ offset +'px, '+ Math.abs(offset * 0.2) +"px" + ")";
-                document.querySelector('.item-3').style.transform = 'translate('+ Math.abs(offset) +'px, '+ Math.abs(offset * 0.2) +"px" + ")";
+                styleItemLeft.transform = 'translate('+ offset +'px, '+ Math.abs(offset * 0.2) +"px" + ")";
+                styleItemRight.transform = 'translate('+ Math.abs(offset) +'px, '+ Math.abs(offset * 0.2) +"px" + ")";
             }
 
         }
-        window.addEventListener('scroll', scrollServices);
+        window.addEventListener('scroll', throttle(scrollItems));
     }
 
-    /* header menu */
-    $headerMenuOpen = document.querySelector('.header-menu-open');
-    $headerMenuOpen.onclick = function() {
-        document.documentElement.classList.add('menu-active');
-    };
-    document.querySelector('.header-menu-close').onclick = function() {
-        document.documentElement.classList.remove('menu-active');
-    };
-    document.documentElement.onclick = function(event) {
-        if (event.target === document.documentElement) {
-            document.documentElement.classList.remove('menu-active');
-        }
-    };
+})();
 
-}
 // Avoid `console` errors in browsers that lack a console.
 (function() {
     var method;
@@ -70,6 +92,8 @@ document.onreadystatechange = function () {
         }
     }
 }());
+
+// Place any jQuery/helper plugins in here.
 
 /* Modernizr 2.8.3 (Custom Build) | MIT & BSD
  * Build: http://modernizr.com/download/#-fontface-backgroundsize-borderimage-borderradius-boxshadow-flexbox-hsla-multiplebgs-opacity-rgba-textshadow-cssanimations-csscolumns-generatedcontent-cssgradients-cssreflections-csstransforms-csstransforms3d-csstransitions-applicationcache-canvas-canvastext-draganddrop-hashchange-history-audio-video-indexeddb-input-inputtypes-localstorage-postmessage-sessionstorage-websockets-websqldatabase-webworkers-geolocation-inlinesvg-smil-svg-svgclippaths-touch-webgl-shiv-mq-cssclasses-addtest-prefixed-teststyles-testprop-testallprops-hasevent-prefixes-domprefixes-load
