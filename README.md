@@ -1,5 +1,5 @@
 # treehouse
-A static web page developed with HTML5, CSS3 and JS from a free [PSD template](http://graphicburger.com/treehouse-psd-web-template/).
+A static web page developed with HTML5, CSS3, JS and ❤  from a free [PSD template](http://graphicburger.com/treehouse-psd-web-template/).
 
 ## Demo
 [Live demo](http://treehouse-test.appspot.com/) running with Google App Engine.
