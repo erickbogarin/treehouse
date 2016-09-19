@@ -1,5 +1,3 @@
-# Arquivo de configuração para deploy no Google App Engine que veremos na aula 4
-
 runtime: php55
 api_version: 1
 version: web
