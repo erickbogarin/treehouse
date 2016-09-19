@@ -2,7 +2,7 @@
 A static web page developed with HTML5, CSS3, JS and ❤  from a free [PSD template](http://graphicburger.com/treehouse-psd-web-template/).
 
 ## Demo
-[Live demo](http://treehouse-test.appspot.com/) running with Google App Engine.
+[Live demo](http://treehouse-test.appspot.com/) running on Google App Engine.
 
 ## Technology Stack
 * HTML5 (Boilerplate), CSS3 and  Vanilla JS
