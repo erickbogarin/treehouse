@@ -1,6 +1,6 @@
 /*!
  * # Treehouse
- * http://github.com/semantic-org/semantic-ui/
+ * https://github.com/erickbogarin/treehouse/
  *
  *
  * Copyright 2016 Erick Bogarin
@@ -895,12 +895,12 @@ textarea {
 }
 
 /*******************************
-					Introdution
+	   Introdution
 *******************************/
 .introdution {
-  background: -webkit-linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("../img/block/title/background.png") no-repeat;
-  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("../img/block/title/background.png") no-repeat;
   max-width: 100%;
+  background-color: #d3d3d3;
+  background-repeat: no-repeat;
   background-size: cover;
   color: white;
   padding: 5% 0 10% 0;
@@ -959,19 +959,15 @@ textarea {
 @media (min-width: 768px) {
   .introdution-btn {
     box-sizing: border-box;
-    -webkit-transition: box-shadow 1s, -webkit-transform 1s;
-            transition: box-shadow 1s, transform 1s;
-    -webkit-transition-delay: 1s, 0s;
-            transition-delay: 1s, 0s;
+    -webkit-transition: box-shadow .5s, -webkit-transform 1s;
+            transition: box-shadow .5s, transform 1s;
   }
 
   .introdution-btn:hover,
   .introdution-btn:focus {
-    -webkit-transform: translateY(-5px);
-            transform: translateY(-5px);
+    -webkit-transform: translateY(-1px);
+            transform: translateY(-1px);
     box-shadow: 0 0 0 99999px rgba(0, 0, 0, 0.8);
-    -webkit-transition-delay: 0s, 1s;
-            transition-delay: 0s, 1s;
   }
 }
 /*******************************
@@ -1104,16 +1100,6 @@ textarea {
     box-sizing: border-box;
     -webkit-transition: -webkit-transform 0.3s ease-in-out;
             transition: transform 0.3s ease-in-out;
-  }
-}
-@media (min-width: 980px) {
-  .service-item:hover {
-    background-color: #FFFAF0;
-    border-radius: 5%;
-    border: 3px solid black;
-    padding-top: 2%;
-    -webkit-transform: scale(1.3);
-            transform: scale(1.3);
   }
 }
 .service-item-title {

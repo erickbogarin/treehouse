@@ -1,10 +1,11 @@
 /*******************************
-					Introdution
+	   Introdution
 *******************************/
 .introdution {
-	@include image-background("../img/block/title/background.png");
 	max-width: 100%;
-	background-size: cover;
+	background-color: #d3d3d3;
+    background-repeat: no-repeat;
+    background-size: cover;
 
 	@extend %text-center;
 	color: $color-white;
@@ -30,7 +31,7 @@
 			font-size: 3.2em;
 			line-height: 1.2em;
 		}
-	} // title
+	} // end title
 
 	&-subtitle {
 		@include subtitle-style;
@@ -71,13 +72,13 @@
 @media (min-width: 768px) {
 	.introdution-btn {
 		box-sizing: border-box;
-        transition: box-shadow 1s, transform 1s;
-		transition-delay: 1s, 0s;
+        transition: box-shadow .5s, transform 1s;
+		//transition-delay: 1s, 0s;
 	}
 	.introdution-btn:hover,
 	.introdution-btn:focus {
-		transform: translateY(-5px);
+		transform: translateY(-1px);
 		box-shadow: 0 0 0 99999px rgba(0,0,0,.8);
-        transition-delay: 0s, 1s;
+        //transition-delay: 0s, .5s;
 	}
 }
