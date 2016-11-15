@@ -83,4 +83,6 @@ $logos: sprite-map("logos/*.png");
 //
 // State
 //
-@import "state/state";
+@import "state/base";
+@import "state/introdution";
+@import "state/menu";

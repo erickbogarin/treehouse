@@ -559,6 +559,15 @@ body {
   }
 }
 
+.loading {
+  display: inline-block;
+  width: 120px;
+  height: 120px;
+  text-indent: -99999px;
+  text-align: center;
+  background: url("/dist/img/loading.svg") no-repeat;
+}
+
 section {
   padding: 10% 10%;
 }
@@ -899,11 +908,12 @@ textarea {
 *******************************/
 .introdution {
   max-width: 100%;
-  background-color: #d3d3d3;
+  background-color: #fff;
   background-repeat: no-repeat;
   background-size: cover;
-  color: white;
   padding: 5% 0 10% 0;
+  -webkit-transition: color 2s linear;
+          transition: color 2s linear;
   animation: fade-in 0.7s ease-in;
   -webkit-animation: fade-in 0.7s ease-in;
   /*--------------
@@ -1832,11 +1842,26 @@ Values
   }
 }
 
+[data-state="is-hidden"] {
+  display: none !important;
+}
+
+[data-state="is-visible"] {
+  display: block;
+}
+
 @media not all and (max-width: 980px) {
   [data-state="hidden"] {
     display: none;
   }
 }
+/*******************************
+	    Introdution state
+*******************************/
+.introdution[data-state="is-visible"] {
+  color: white;
+}
+
 @media (max-width: 980px) {
   .menu-active .header-menu {
     left: 0;

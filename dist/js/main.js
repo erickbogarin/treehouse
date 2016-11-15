@@ -1,5 +1,7 @@
 (function() {
 
+    var loading = document.querySelectorAll('.loading')[0];    
+    var btnIntro = document.getElementById('btn-intro');
     var imgs = document.querySelectorAll('section[data-src]'),
         img = new Image(),
         srcImage = '';
@@ -16,6 +18,10 @@
                             "rgba(0, 0, 0, 0.6)," +
                             "rgba(0, 0, 0, 0.6))," +
                         "url("+srcImage+")";
+                
+                imgs[value].dataset.state = 'is-visible';
+                btnIntro.dataset.state = 'is-visible';
+                loading.dataset.state = 'is-hidden';                        
             }
         })(i);
         img.src= window.location.protocol + srcImage;
@@ -58,6 +64,7 @@ setTimeout(function () {
         };
     }
 
+    // checks screen width in order to avoid the event on mobile devices 
     if(screen && screen.width > 900) {
         // header parallax
         function scrollHeader() {
@@ -83,14 +90,14 @@ setTimeout(function () {
 
             var elementTop =  document.querySelector('.service').getBoundingClientRect().top;
             if(wScroll > elementTop - window.innerHeight){
-                var offset = (Math.min(0, wScroll - elementTop + window.innerHeight - 350)).toFixed();
+                var offset = (Math.min(0, wScroll - elementTop + window.innerHeight - 500)).toFixed();
 
                 styleItemLeft.transform = 'translate('+ offset +'px, '+ Math.abs(offset * 0.2) +"px" + ")";
                 styleItemRight.transform = 'translate('+ Math.abs(offset) +'px, '+ Math.abs(offset * 0.2) +"px" + ")";
             }
 
         }
-        window.addEventListener('scroll', throttle(scrollItems));
+        window.addEventListener('scroll', scrollItems);
     }
 
 })();

@@ -41,14 +41,14 @@
 
             var elementTop =  document.querySelector('.service').getBoundingClientRect().top;
             if(wScroll > elementTop - window.innerHeight){
-                var offset = (Math.min(0, wScroll - elementTop + window.innerHeight - 350)).toFixed();
+                var offset = (Math.min(0, wScroll - elementTop + window.innerHeight - 500)).toFixed();
 
                 styleItemLeft.transform = 'translate('+ offset +'px, '+ Math.abs(offset * 0.2) +"px" + ")";
                 styleItemRight.transform = 'translate('+ Math.abs(offset) +'px, '+ Math.abs(offset * 0.2) +"px" + ")";
             }
 
         }
-        window.addEventListener('scroll', throttle(scrollItems));
+        window.addEventListener('scroll', scrollItems);
     }
 
 })();

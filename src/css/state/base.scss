@@ -1,0 +1,13 @@
+[data-state="is-hidden"] {
+    display: none !important;
+}
+
+[data-state="is-visible"] {
+    display: block;
+}
+
+@media not all and #{$screen-md-max} {
+    [data-state="hidden"] {
+        display: none;
+    }
+}

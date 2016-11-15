@@ -1,9 +1,3 @@
-@media not all and #{$screen-md-max} {
-    [data-state="hidden"] {
-        display: none;
-    }
-}
-
 @media #{$screen-md-max} {
     .menu-active .header-menu {
         left: 0;

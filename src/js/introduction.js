@@ -1,5 +1,7 @@
 (function() {
 
+    var loading = document.querySelectorAll('.loading')[0];    
+    var btnIntro = document.getElementById('btn-intro');
     var imgs = document.querySelectorAll('section[data-src]'),
         img = new Image(),
         srcImage = '';
@@ -16,6 +18,10 @@
                             "rgba(0, 0, 0, 0.6)," +
                             "rgba(0, 0, 0, 0.6))," +
                         "url("+srcImage+")";
+                
+                imgs[value].dataset.state = 'is-visible';
+                btnIntro.dataset.state = 'is-visible';
+                loading.dataset.state = 'is-hidden';                        
             }
         })(i);
         img.src= window.location.protocol + srcImage;

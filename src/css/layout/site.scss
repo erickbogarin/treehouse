@@ -45,6 +45,17 @@ body {
     }
 }
 
+.loading {  
+    display: inline-block;
+    width: 120px;
+    height: 120px;
+
+    text-indent: -99999px;
+    text-align: center;
+
+    background: url('/dist/img/loading.svg') no-repeat;                  
+}
+
 section {
     @include padding-height(10%);
     @media #{$screen-md-min} {
