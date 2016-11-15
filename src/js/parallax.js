@@ -5,7 +5,7 @@
         fn.running = false;
 
         return function() {
-            if(fn.run) return;
+            if(fn.running) return;
             fn.running = true;
             setTimeout(function() {
                 fn.running = false;
@@ -15,6 +15,7 @@
         };
     }
 
+    // checks screen width in order to avoid the event on mobile devices 
     if(screen && screen.width > 900) {
         // header parallax
         function scrollHeader() {
@@ -29,7 +30,7 @@
               headerText.style.opacity = 1 - (scrollPos/600);
           }
         }
-        window.addEventListener('scroll', throttle(scrollHeader));
+        window.addEventListener('scroll', scrollHeader);
 
         // float parallax in .service .item-x
         function scrollItems() {
