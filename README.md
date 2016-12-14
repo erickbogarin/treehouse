@@ -6,6 +6,7 @@ A static web page developed with HTML5, CSS3, JS and ❤
 
 ## Technology Stack
 * HTML5 (Boilerplate), CSS3 and  Vanilla JS
+* Object Oriented CSS (OOCSS)
 * SMACSS Modular Architecture
 * Preprocessor Sass (composer)
 * Gulp
@@ -16,4 +17,5 @@ A static web page developed with HTML5, CSS3, JS and ❤
 
 ## Credits
 Design by [FreebiesXpress](http://freebiesxpress.com/)
+
 Check the PSD template [here](http://graphicburger.com/treehouse-psd-web-template/).
