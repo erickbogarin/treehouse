@@ -20,8 +20,13 @@
   //	Description
   // --------------
   &-description {
+    padding-top: 2%;
+    text-align: center;
+
     @media #{$screen-md-min} {
       flex: 1;
+      padding-top: 0;
+      text-align: left;
     }
 
     &-title {
@@ -34,14 +39,25 @@
       &:last-child {
         padding-top: 2%;
       }
+      @media #{$screen-sm-min} {
+        margin-bottom: 3%;
+      }
       @media #{$screen-md-min} {
         width: 40%;
-        padding-bottom: 3%;
       }
     }
     &-bottom {
       @media #{$screen-md-max} {
-        padding-top: 2%;
+        border-top: 1px solid #ccc;
+        margin: 0 auto;
+        padding-top: 3%;
+        text-align: center;
+      }
+      @media #{$screen-sm-min} {
+        width: 60%;
+      }
+      @media #{$screen-md-max} {
+        margin-top: 5%;
       }
     }
 
@@ -51,7 +67,7 @@
   //	 Feature
   // --------------
   &-feature {
-    padding-top: 10%;
+    padding-top: 5%;
     text-align: center;
     @media #{$screen-md-min} {
       padding-top: 2%;
@@ -67,15 +83,18 @@
     &-title {
       font-size: 1em;
       font-weight: bold;
-      @media #{$screen-sm-max} {
-        padding-top: 1em;
+      @media #{$screen-md-max} {
+        margin-top: 1em;
+      }
+      @media #{$screen-lg-min} {
+        padding-bottom: .3em;
       }
     }
     &-description {
       @include subtitle-style($color-silver);
       font-size: 0.85em;
-      @media #{$screen-md-max} {
-        padding-top: 4%;
+      @media #{$screen-lg-max} {
+        padding-top: 2%;
       }
     }
   }
@@ -87,7 +106,7 @@
     text-transform: uppercase;
     display: block;
     @media #{$screen-md-max} {
-      padding-top: 10%;
+      margin-top: 5%;
       text-align: center;
     }
     @media #{$screen-md-min} {

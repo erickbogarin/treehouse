@@ -64,7 +64,7 @@ setTimeout(function () {
         };
     }
 
-    // checks screen width in order to avoid the event on mobile devices 
+    // checks screen width to avoid parallax on mobile devices
     if(screen && screen.width > 900) {
         // header parallax
         function scrollHeader() {

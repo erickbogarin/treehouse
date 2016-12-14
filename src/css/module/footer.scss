@@ -18,12 +18,11 @@
     }
 
     &-social {
-        @media #{$screen-sm-max} {
-           padding-top: 1em;
-        }
+        padding-top: 1em;
         @media #{$screen-md-min} {
             position: absolute;
-            left: 40%;
+            left: 50%;
+            transform: translateX(-50%);
         }
     }
 }

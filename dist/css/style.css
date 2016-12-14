@@ -1311,11 +1311,17 @@ textarea {
   display: -ms-flexbox;
   display: flex;
 }
+.latest-description {
+  padding-top: 2%;
+  text-align: center;
+}
 @media (min-width: 980px) {
   .latest-description {
     -webkit-box-flex: 1;
         -ms-flex: 1;
             flex: 1;
+    padding-top: 0;
+    text-align: left;
   }
 }
 .latest-description-subtitle {
@@ -1325,19 +1331,36 @@ textarea {
 .latest-description-subtitle:last-child {
   padding-top: 2%;
 }
+@media (min-width: 768px) {
+  .latest-description-subtitle {
+    margin-bottom: 3%;
+  }
+}
 @media (min-width: 980px) {
   .latest-description-subtitle {
     width: 40%;
-    padding-bottom: 3%;
   }
 }
 @media (max-width: 980px) {
   .latest-description-bottom {
-    padding-top: 2%;
+    border-top: 1px solid #ccc;
+    margin: 0 auto;
+    padding-top: 3%;
+    text-align: center;
+  }
+}
+@media (min-width: 768px) {
+  .latest-description-bottom {
+    width: 60%;
+  }
+}
+@media (max-width: 980px) {
+  .latest-description-bottom {
+    margin-top: 5%;
   }
 }
 .latest-feature {
-  padding-top: 10%;
+  padding-top: 5%;
   text-align: center;
 }
 @media (min-width: 980px) {
@@ -1357,18 +1380,23 @@ textarea {
   font-size: 1em;
   font-weight: bold;
 }
-@media (max-width: 768px) {
+@media (max-width: 980px) {
   .latest-feature-title {
-    padding-top: 1em;
+    margin-top: 1em;
+  }
+}
+@media (min-width: 1170px) {
+  .latest-feature-title {
+    padding-bottom: .3em;
   }
 }
 .latest-feature-description {
   color: #777777;
   font-size: 0.85em;
 }
-@media (max-width: 980px) {
+@media (max-width: 1170px) {
   .latest-feature-description {
-    padding-top: 4%;
+    padding-top: 2%;
   }
 }
 .latest-details {
@@ -1377,7 +1405,7 @@ textarea {
 }
 @media (max-width: 980px) {
   .latest-details {
-    padding-top: 10%;
+    margin-top: 5%;
     text-align: center;
   }
 }
@@ -1855,15 +1883,15 @@ textarea {
             justify-content: flex-start;
   }
 }
-@media (max-width: 768px) {
-  .footer-social {
-    padding-top: 1em;
-  }
+.footer-social {
+  padding-top: 1em;
 }
 @media (min-width: 980px) {
   .footer-social {
     position: absolute;
-    left: 40%;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
   }
 }
 
