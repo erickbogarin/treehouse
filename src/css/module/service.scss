@@ -9,18 +9,29 @@
 	//	 Items
 	// --------------
 	&-item {
-        background: white;
+  	background: white;
 		@media #{$screen-md-min} {
             @include col(4);
             transition: transform 0.3s ease-in-out;
 		}
 
+		// wrapper to scale .service-item-content
+		&-content {
+			@media #{$screen-md-min} {
+				transition: .3s;
+
+				&:hover {
+					transform: scale(1.2);					
+				}
+			}
+		}
+
 		&-title {
 			@extend %title-style;
-            padding-top: 1em;
-     		@media #{$screen-md-min} {
-                padding-top: 3em;
-            }
+    	padding-top: 1em;
+   		@media #{$screen-md-min} {
+    		padding-top: 3em;
+      }
 		}
 
 		&-description {
@@ -29,12 +40,12 @@
 			font-size: 1em;
 			line-height: 2em;
 			text-align: center;
-            padding-top: 1em;
-            padding-bottom: 1em;
+      padding-top: 1em;
+      padding-bottom: 1em;
 
 			@media #{$screen-md-min} {
-                padding-top: 1.75em;
-                font-size: .7em;
+	      padding-top: 1.75em;
+	      font-size: .7em;
 			}
 		}
 	} // item

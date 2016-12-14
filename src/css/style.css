@@ -499,6 +499,18 @@ table {
   }
 }
 
+@media (min-width: 1170px) {
+  .standard-item .icon::before, .standard-item .icon::after {
+    content: "";
+    background-color: #999;
+    display: inline-block;
+    position: absolute;
+    top: 50%;
+    height: 3px;
+    width: 100px;
+  }
+}
+
 /*-----------------------------
             Grid
 -------------------------------*/
@@ -1090,6 +1102,14 @@ textarea {
     transition: transform 0.3s ease-in-out;
   }
 }
+@media (min-width: 980px) {
+  .service-item-content {
+    transition: .3s;
+  }
+  .service-item-content:hover {
+    transform: scale(1.2);
+  }
+}
 .service-item-title {
   padding-top: 1em;
 }
@@ -1242,9 +1262,8 @@ textarea {
     transform: rotate(360deg);
   }
 }
-/*******************************
-          Latest
-*******************************/
+/* Values
+====================== */
 .latest-content {
   display: flex;
 }
@@ -1327,9 +1346,8 @@ textarea {
 .latest-image {
   display: none;
 }
-@media (min-width: 980px) {
+@media (min-width: 1170px) {
   .latest-image {
-    flex: 1;
     display: block;
     position: absolute;
     right: 0;
@@ -1444,38 +1462,38 @@ textarea {
   width: 41px;
 }
 
-/*******************************
-Values
-*******************************/
+/* Standard
+====================== */
 .standard {
   background-color: #f9f9f9;
+  /* Wrapping element for .standard-item, nesting .title, .description and .icon */
 }
-@media (min-width: 980px) {
+@media (min-width: 1170px) {
   .standard-container {
     display: flex;
   }
 }
 .standard-item {
   padding-bottom: 2em;
+  /* Style a line between the icons */
+  /* Clears the line for the first and the last icon */
+  /* Title of the item */
+  /* Description of the item */
 }
-@media (min-width: 980px) {
-  .standard-item {
-    flex: 1;
-  }
-  .standard-item .icon:after {
-    display: inline-block;
-    margin: 50% 0 0px 8em;
-    text-align: center;
-    vertical-align: middle;
-    height: 3px;
-    content: " ";
-    text-shadow: none;
-    background-color: #999;
-    width: 220%;
-  }
-  .standard-item:last-child .icon:after {
-    display: none;
-  }
+.standard-item .icon {
+  position: relative;
+}
+.standard-item .icon::before {
+  left: 150%;
+}
+.standard-item .icon::after {
+  right: 150%;
+}
+.standard-item:first-child .icon::after {
+  display: none;
+}
+.standard-item:last-child .icon::before {
+  display: none;
 }
 .standard-item .title {
   font-size: 1em;
@@ -1483,6 +1501,7 @@ Values
 }
 .standard-item-description {
   color: #777777;
+  padding: 0 10px;
   margin-top: 1em;
 }
 
@@ -1636,9 +1655,8 @@ Values
   width: 186px;
 }
 
-/*******************************
-        Content Footer
-*******************************/
+/* Content Footer
+====================== */
 .content-footer {
   background-color: #222222;
   color: white;
@@ -1648,6 +1666,15 @@ Values
 .content-footer .title {
   font-weight: bold;
   font-size: inherit;
+  margin-top: 5%;
+}
+.content-footer .title::first-child {
+  margin-top: 0;
+}
+@media (min-width: 980px) {
+  .content-footer .title {
+    margin-top: 0;
+  }
 }
 .content-footer-info {
   display: flex;

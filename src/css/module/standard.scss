@@ -1,40 +1,51 @@
-/*******************************
-Values
-*******************************/
+/* Standard
+====================== */
 .standard {
   @extend %text-center;
   background-color: rgb(249, 249, 249);
 
   &-container {
-    @media #{$screen-md-min} {
+    @media #{$screen-lg-min} {
       display: flex;
     }
   }
+
+  /* Wrapping element for .standard-item, nesting .title, .description and .icon */
   &-item {
     padding-bottom: 2em;
-    @media #{$screen-md-min} {
-      flex: 1;
-      .icon:after {
-        display: inline-block;
-        margin: 50% 0 0px 8em;
-        text-align: center;
-        vertical-align: middle;
-        height: 3px;
-        content: " ";
-        text-shadow: none;
-        background-color: #999;
-        width: 220%;
-      }
-      &:last-child .icon:after{
-        display: none;
-      }
+
+    /* Style a line between the icons */
+    .icon {
+      position: relative;
     }
+    .icon::before {
+      @extend %icon-line;
+      left: 150%;
+    }
+
+    .icon::after {
+      @extend %icon-line;
+      right: 150%;
+    }
+
+    /* Clears the line for the first and the last icon */
+    &:first-child .icon::after {
+      display: none;
+    }
+    &:last-child .icon::before{
+      display: none;
+    }
+
+    /* Title of the item */
     .title{
       font-size: 1em;
       padding-top: 1em;
     }
+
+    /* Description of the item */
     &-description {
       @include subtitle-style($color-silver);
+      padding: 0 10px;
       margin-top: 1em;
     }
   }

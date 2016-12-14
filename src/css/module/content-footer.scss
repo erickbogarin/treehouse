@@ -1,6 +1,5 @@
-/*******************************
-        Content Footer
-*******************************/
+/* Content Footer
+====================== */
 .content-footer {
 
     background-color: rgb(34, 34, 34);
@@ -12,6 +11,15 @@
     & .title {
         font-weight: bold;
         font-size: inherit;
+        margin-top: 5%;
+
+        &::first-child {
+            margin-top: 0;
+        }
+
+        @media #{$screen-md-min} {
+            margin-top: 0;
+        }
     }
 
     // Info

@@ -4,10 +4,10 @@
 .introdution {
 	max-width: 100%;
 	background-color: #fff;
-    background-repeat: no-repeat;
-    background-size: cover;
+  background-repeat: no-repeat;
+  background-size: cover;
 
-	@extend %text-center;	
+	@extend %text-center;
 
 	padding: 5% 0 10% 0;
 
@@ -45,7 +45,7 @@
 		}
 
 	} // subititle
-	
+
 }
 
 @-webkit-keyframes fade-in {
@@ -63,7 +63,7 @@
 	}
 	100% {
 		opacity: 1%;
-	}	
+	}
 }
 
 /*******************************
@@ -72,7 +72,7 @@
 @media (min-width: 768px) {
 	.introdution-btn {
 		box-sizing: border-box;
-        transition: box-shadow .5s, transform 1s;
+    transition: box-shadow .5s, transform 1s;
 		//transition-delay: 1s, 0s;
 	}
 	.introdution-btn:hover,
